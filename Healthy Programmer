@@ -1,0 +1,61 @@
+Application Code:
+import pygame
+import time
+import datetime
+pygame.mixer.init()
+
+def healthyProgram():
+    while(True):
+        if time.localtime().tm_min == 20 or time.localtime().tm_min == 40 or time.localtime().tm_min == 00:
+            print(" Time to drink water,Please drink water and start work again:")
+            pygame.mixer.music.load("water.mp3")
+            pygame.mixer.music.play(-1)
+            time.sleep(5)
+            waterDrank = input(" Enter 'drank' to stop the music:")
+            if waterDrank.lower() == "drank":
+                pygame.mixer.music.stop()
+                writeNote("'Drank Water'")
+                time.sleep(60)
+
+        elif time.localtime().tm_min == 00:
+            print(" Time to do both Physical and eyes exercise,Please do it and start work again:")
+            pygame.mixer.music.load("eyes.mp3")
+            pygame.mixer.music.play(-1)
+            time.sleep(5)
+            bothExercise = input(" Please enter 'eyedone' to stop the music:")
+            if bothExercise.lower() == "bothdone":
+                pygame.mixer.music.stop()
+                writeNote(" did both 'Physical' and 'Eye Exercise' ")
+                time.sleep(60)
+
+        elif time.localtime().tm_min == 30:
+            print(" Eyes exercise time,Please do it and start work again:")
+            pygame.mixer.music.load("eyes.mp3")
+            pygame.mixer.music.play(-1)
+            time.sleep(5)
+            eyeExercise = input(" Please enter 'eyedone' to stop the music:")
+            if eyeExercise.lower() == "eyedone":
+                pygame.mixer.music.stop()
+                writeNote("did 'Eye Exercise'")
+                time.sleep(60)
+
+        elif time.localtime().tm_min == 45:
+            print(" physical exercise time,Please do it and start work again:")
+            pygame.mixer.music.load("physical.mp3")
+            pygame.mixer.music.play(-1)
+            time.sleep(5)
+            physicalExercise = input(" Please enter 'Exdone' to stop the music:")
+            if physicalExercise.lower() == "exdone":
+                pygame.mixer.music.stop()
+                writeNote("did 'Physical Exercise'")
+                time.sleep(60)
+
+        continue
+
+def writeNote(string):
+    with open("myNote.txt", "a") as f:
+        f.write(f" you {string} at this time: {datetime.datetime.now()}\n")
+        print(" Your note and time is written successfully with named 'myNotes' ")
+healthyProgram()
+
+

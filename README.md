@@ -23,3 +23,5 @@ Pygame module (It is not a built-in module so you need to install this module us
 
 Install Pygame:
 you need to open any terminal and write 'pip install pygame' it will be install/add in python packages after that you can use this module in python by importing the module.
+
+

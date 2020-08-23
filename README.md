@@ -1,4 +1,4 @@
-# -Healthy-Programmer-Application-in-python
+# Healthy-Programmer-Application-in-python
 Everyone needs a break during their work and in break time they will drink water and eat some foods, do some physical exercise to re boost their energy with respect to that i will create this application which is good for programmers.those programmer who spend their most of time with laptops and they don't realize how time going so fast and they don't do any type of exercise and don't drink to much water in a day.a
 
 Application Introduction:
@@ -28,4 +28,6 @@ Install Pygame:
 
 you need to open any terminal and write 'pip install pygame' it will be install/add in python packages after that you can use this module in python by importing the module.
 
+# if you want to see program with output visit the below link:
+https://codingwithburhan.blogspot.com/
 
